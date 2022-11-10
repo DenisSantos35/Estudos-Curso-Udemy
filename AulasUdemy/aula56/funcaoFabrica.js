@@ -40,6 +40,17 @@ function criaPessoa(nome, sobrenome, peso, altura){
         nome,
         sobrenome,
         peso,
+        get nomeCompleto(){
+            return `${this.nome} ${this.sobrenome}`
+        },
+        set nomeCompleto(valor){            //console.log(valor)
+                valor =  valor.split(' ');
+                //console.log(lista);
+                this.nome = valor.shift();
+                //console.log(valor);
+                this.sobrenome = valor.join(' ')
+
+        },
         fala: function (assunto){
             return `Nome ${this.nome} ${this.sobrenome} pesa ${this.peso} diz ${assunto} `
         },
@@ -50,9 +61,28 @@ function criaPessoa(nome, sobrenome, peso, altura){
         }
     }
 }
+
+const pessoa = criaPessoa('Denis', 'Santos');
+pessoa.nomeCompleto = 'Joyce Alecrim Pereira';
+console.log(pessoa.nomeCompleto);
+pessoa.nomeCompleto = 'Joao inacio da silva'
+console.log(pessoa.nomeCompleto);
+
+
+
+
+
+
+
+
+
+/*
 const pessoa = criaPessoa('Denis', 'Santos', 60, 1.68);
 const pessoa2 = criaPessoa('Joyce', 'Alecrim', 70, 1.72);
 const indiceCorporal = pessoa.imc;
+console.log(`${pessoa.fala(': Quero saber meu imc?')}`)
+console.log(`${pessoa2.fala('')} ${pessoa.imc}`)
+
 
 const cadastro = JSON.stringify(pessoa);
 const cadastro2 = JSON.stringify(pessoa2);
@@ -76,6 +106,7 @@ for( let i in resultado2){
     document.write(resultado2[i])
     document.write(' ')
 }
+*/
 
 
 
