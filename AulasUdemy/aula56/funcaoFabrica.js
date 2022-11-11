@@ -21,19 +21,19 @@ function criaPessoa(nome = 'joyce', sobrenome = 'pereira', peso = 100, altura = 
 
     }   
 }
-/*
+
 const p1 = criaPessoa();
 //console.log(p1)
 const mensagem = p1.fala('Hello!!');
 //console.log(mensagem)
 
 console.log(mensagem, p1.imc);
-/*
+
 const localWeb = JSON.stringify(p1);
 console.log(localWeb);
 
 localStorage.setItem('Pessoa', localWeb);
-*/
+
 
 function criaPessoa(nome, sobrenome, peso, altura){
     return {
@@ -68,15 +68,6 @@ console.log(pessoa.nomeCompleto);
 pessoa.nomeCompleto = 'Joao inacio da silva'
 console.log(pessoa.nomeCompleto);
 
-
-
-
-
-
-
-
-
-/*
 const pessoa = criaPessoa('Denis', 'Santos', 60, 1.68);
 const pessoa2 = criaPessoa('Joyce', 'Alecrim', 70, 1.72);
 const indiceCorporal = pessoa.imc;
@@ -107,7 +98,6 @@ for( let i in resultado2){
     document.write(' ')
 }
 */
-
 
 
 
