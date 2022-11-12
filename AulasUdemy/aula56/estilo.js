@@ -1,43 +1,29 @@
-const nome  = document.querySelector('#nome');
-const botao = document.querySelector('#botao');
-const deletar = document.querySelector('#delete');
-const novaLista = document.querySelector('#delet');
-let lista = [];
+const nome = document.querySelector('#nome');
+const btnEntrada = document.querySelector('#botao');
+const armazenaNome = [];
+const nomeDelete = document.querySelector('#del');
+const btnSaida = document.querySelector('#delete');
+const resposta = document.querySelector('#resposta')
 
-function enviaLocale(dado){
-    dado = JSON.stringify(dado);
-    return dado
+btnEntrada.addEventListener('click', function(){    
+    if(isNaN(nome.value)){
+        armazenaNome.push(nome.value);
+        console.log(armazenaNome);       
+    }     
+});
+    const novo = JSON.stringify(armazenaNome);
+    localStorage.setItem('nome', novo);
+    const bancoDados = localStorage.getItem('nome');
+    const novoDados = JSON.parse(bancoDados);
+    console.log(novoDados);
+    for(let i of novoDados){
+    resposta.innerHTML = `${i}`
 }
 
-function gravaLocale(dado){
-
-    localStorage.setItem('nome', dado);
-
-}
-
-botao.addEventListener('click', function(){
-    if(isNaN(nome.value)){  
-        lista.push(nome.value);
-        nome.value = " ";
-        nome.focus();
-        
-    }else{
-        nome.value = " ";
-        nome.focus();
-    } 
-    console.log(lista);
-    const dados = enviaLocale(lista); 
-    gravaLocale(dados);
-    
-    
+btnSaida.addEventListener('click', function(){
+    armazenaNome.pop();
+    console.log(armazenaNome);
 });
 
-function dele(){    
-    lista.pop();
-    enviaLocale(lista);
-    gravaLocale(lista);
 
 
-};
-
-deletar.addEventListener('click', dele);
