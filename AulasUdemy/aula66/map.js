@@ -1,6 +1,8 @@
 //dobre os numeros
 //map consegue ao retornar mudar o valor para o novo array mudar o valor de dentro do array
 //map tera sempre o mesmo tamanho original
+//map quando for utilizado se for gerar uma nova constante fazer sempre uma copia pois se nao fizer a copia voce aterara o objeto inicial
+// cont newObjeto = {...objetoOriginal}
 /*
 //indice         0  1   2   3  4  5  6  7  8  9   10  11  12
 const numeros = [5, 50, 80, 1, 2, 3, 5, 8, 7, 11, 15, 22, 27];
