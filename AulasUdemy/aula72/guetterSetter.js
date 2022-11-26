@@ -22,7 +22,20 @@ function Produto(nome, preco, estoque){
         }
     });
 
-};
+}
+function criaProduto(nome){
+    return {
+        get nome(){
+            return nome;
+        },
+        set nome(valor){
+            if(typeof valor === 'number'){
+                console.log('Erro');
+                return
+            }
+        }
+    }
+}
 
 const p1 = new Produto('Shirt', 20, 3);
 //p1.estoque = 5
@@ -30,3 +43,7 @@ console.log(p1);
 //para acessar o valor de guetter pegamos a constante que recebe o objeto e o metodo ao qual esta sendo retornado para o guetter
 p1.estoque = 1000
 console.log(p1.estoque) //3
+
+const p2 = criaProduto('TV');
+p2.nome = 'computador   '
+console.log(p2.nome)
