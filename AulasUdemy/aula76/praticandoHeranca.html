@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="praticandoHeranca.css">
+</head>
+<body>
+    <fieldset class='mother'>
+        <legend ><h3>Cadastro de Produto:</h3></legend>
+        <fieldset class='container'>
+            <legend>Produto</legend>
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" class="nome">
+        </fieldset>
+        <fieldset class='container'>
+            <legend>Estoque:</legend>
+            <label for="quantidade">Quantidade</label>
+            <input type="text" name="quantidade" class="quantidade">
+        </fieldset>
+        <fieldset class='container'>
+            <legend>Material:</legend>
+            <select name="material"  class="material" style="width: 30%;">
+                <option value="text">(Seleção)</option>
+                <option value="text">Plastico</option>
+                <option value="text">Vidro</option>
+                <option value="text">Metal</option>
+                <option value="text">Inox</option>
+                <option value="text">Porcelana</option>        
+            </select>
+        </fieldset>
+        <fieldset class='container'>
+            <legend>Preco:</legend>
+            <label for="preco">Preco R$:</label>
+            <input type="text" name="preco" class="preco">
+
+        </fieldset>
+        <hr>
+        <button class="btn">Armazenar</button>
+    </fieldset>
+
+
+    <script src="praticandoHeranca.js"></script>
+    
+</body>
+</html>
