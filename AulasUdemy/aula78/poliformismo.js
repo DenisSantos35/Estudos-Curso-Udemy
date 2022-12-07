@@ -88,7 +88,7 @@ ContaPoupanca.prototype.constructor = ContaPoupanca;
 //Podemos observar que ao criar o prototype de Conta ela não e modificada, mesmo que conta corrente utilizou e sobrescreveu
 // chamamos isto de polimorfismo.
 
-const cp = new ContaPoupanca(11, 22, 0, 100); // conta poupanca
+const cp = new ContaPoupanca(11, 22, 0, 100); // conta poupanca 
 cp.depositar(200); //Ag/c 11 / 22 | Saldo: R$200.00
 cp.sacar(190);  //Ag/c 11 / 22 | Saldo: R$10.00
 cp.sacar(20); //Saldo insuficiente: 10
