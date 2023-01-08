@@ -1,19 +1,20 @@
 //metodos estaticos
-
+//criacao de classe controle remoto
 class ControleRemoto {
-    constructor(tv){
-        this.tv = tv;
-        this.volume = 0;
+    constructor(tv){ //torna classe construtora e recebe um parametro tv
+        //atributos
+        this.tv = tv; //cria atributo tv
+        this.volume = 0; //cria atributo volume e inicializa com 0
     }
     //metodo de instancia
-    aumentarVolume(){
-        this.volume += 2;
+    aumentarVolume(){  // metodo para aumentar volume
+        this.volume += 2; //volume recbe a cada chamada + 2 e atribui ao atributo o novo valor
     }
-    diminuirVolume(){
-        this.volume -= 2;
+    diminuirVolume(){ //metodo para diminuir
+        this.volume -= 2; //atributo pega o valor que contem em volume e diminui em 2
     }
     //metodo estatico
-    static trocaPilha(){
+    static trocaPilha(){  //para criar um metodo statico que outra funcao noa pode herdar utilizamos a palavra static
         console.log('ok vou trocar.')
     }
     static soma(x, y){
@@ -21,6 +22,7 @@ class ControleRemoto {
     }
 }
 
+// 
 const controle1 = new ControleRemoto('Samsung');
 const controle2 = new ControleRemoto('LG');
 console.log(controle1)

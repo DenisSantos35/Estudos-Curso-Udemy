@@ -30,7 +30,7 @@ const carro = new Carro('Fusca');
 for(let i = 0; i <= 200; i++){
    carro.acelerar();
 }
-//carro.velocidade = 82;
+//carro.velocidade = 82; //a atribuicao acessa o setter no caso valor a ser settado e 82
 console.log(carro.velocidade)
 */
 //cria uma classe pessoa
